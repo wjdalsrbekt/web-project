@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script type='text/javascript' src='http://www.google.com/jsapi'></script>
+
+    <script type='text/javascript'>
+        google.load('visualization', '1', {
+            'packages': ['geochart']
+        });
+        google.setOnLoadCallback(drawVisualization);
+
+        function drawVisualization() {
+            var data = new google.visualization.DataTable();
+
+            data.addColumn('string', 'Country');
+            data.addColumn('number', 'Value');
+            data.addColumn({
+                type: 'string',
+                role: 'tooltip'
+            });
+            var ivalue = new Array();
+
+            data.addRows([
+                [{
+                    v: 'KR-11',
+                    f: '서울특별시'
+                }, 0, '클릭시 해당 지역 기부 사이트 이동합니다']
+            ]);
+            ivalue['KR-11'] = '#FFD8D8';
+
+            data.addRows([
+                [{
+                    v: 'KR-26',
+                    f: '부산광역시'
+                }, 1, '클릭시 해당 지역 기부 사이트 이동합니다']
+            ]);
+            ivalue['KR-26'] = '#00FFFF';
+
+            data.addRows([
+                [{
+                    v: 'KR-27',
+                    f: '대구광역시'
+                }, 2, '클릭시 해당 지역 기부 사이트 이동합니다']
+            ]);
+            ivalue['KR-27'] = '#3182BD';
+
+            data.addRows([
+                [{
+                    v: 'KR-30',
+                    f: '대전광역시'
+                }, 3, '클릭시 해당 지역 기부 사이트 이동합니다']
+            ]);
+            ivalue['KR-30'] = '#3182BD';
+
+            data.addRows([
+                [{
+                    v: 'KR-29',
+                    f: '광주광역시'
+                }, 4, '클릭시 해당 지역 기부 사이트 이동합니다']
+            ]);
+            ivalue['KR-29'] = '#3182BD';
+
+            data.addRows([
+                [{
+                    v: 'KR-28',
+                    f: '인천광역시'
+                }, 5, '클릭시 해당 지역 기부 사이트 이동합니다']
+            ]);
+            ivalue['KR-28'] = '#3182BD';
+
+            data.addRows([
+                [{
+                    v: 'KR-31',
+                    f: '울산광역시'
+                }, 6, '클릭시 해당 지역 기부 사이트 이동합니다']
+            ]);
+            ivalue['KR-31'] = '#3182BD';
+
+            data.addRows([
+                [{
+                    v: 'KR-43',
+                    f: '충청북도'
+                }, 7, '클릭시 해당 지역 기부 사이트 이동합니다']
+            ]);
+            ivalue['KR-43'] = '#3182BD';
+
+            data.addRows([
+                [{
+                    v: 'KR-44',
+                    f: '충청남도'
+                }, 8, '클릭시 해당 지역 기부 사이트 이동합니다']
+            ]);
+            ivalue['KR-44'] = '#3182BD';
+
+            data.addRows([
+                [{
+                    v: 'KR-42',
+                    f: '강원도'
+                }, 9, '클릭시 해당 지역 기부 사이트 이동합니다']
+            ]);
+            ivalue['KR-42'] = '#FFF612';
+
+            data.addRows([
+                [{
+                    v: 'KR-41',
+                    f: '경기도'
+                }, 10, '클릭시 해당 지역 기부 사이트 이동합니다']
+            ]);
+            ivalue['KR-41'] = '#9ECAE1';
+
+            data.addRows([
+                [{
+                    v: 'KR-47',
+                    f: '경상북도'
+                }, 11, '클릭시 해당 지역 기부 사이트 이동합니다']
+            ]);
+            ivalue['KR-47'] = '#9ECAE1';
+
+            data.addRows([
+                [{
+                    v: 'KR-48',
+                    f: '경상남도'
+                }, 12, '클릭시 해당 지역 기부 사이트 이동합니다']
+            ]);
+            ivalue['KR-48'] = '#9ECAE1';
+
+            data.addRows([
+                [{
+                    v: 'KR-49',
+                    f: '제주도'
+                }, 13, '클릭시 해당 지역 기부 사이트 이동합니다']
+            ]);
+            ivalue['KR-49'] = '#9ECAE1';
+
+            data.addRows([
+                [{
+                    v: 'KR-45',
+                    f: '전라북도'
+                }, 14, '클릭시 해당 지역 기부 사이트 이동합니다']
+            ]);
+            ivalue['KR-45'] = '#9ECAE1';
+
+            data.addRows([
+                [{
+                    v: 'KR-46',
+                    f: '전라남도'
+                }, 15, '클릭시 해당 지역 기부 사이트 이동합니다']
+            ]);
+            ivalue['KR-46'] = '#9ECAE1';
+
+            var options = {
+                backgroundColor: {
+                    fill: '#FFFFFF',
+                    stroke: '#FFFFFF',
+                    strokeWidth: 0
+                },
+                colorAxis: {
+                    minValue: 0,
+                    maxValue: 21,
+                    colors: ['#0100FF', '#050099', '#050099', '#050099', '#050099', '#050099', '#050099', '#ABF200', '#E1FF36', '#FFE400', '#FFB85A', '#36FFFF', '#00B4DB', '#FFFFA2', '#FF5AD9', '#FF24A3', '#353535', '#DEEBF7', '#DEEBF7', '#DEEBF7', '#DEEBF7', '#DEEBF7', ]
+                },
+                legend: 'none',
+                backgroundColor: {
+                    fill: '#FFFFFF',
+                    stroke: '#FFFFFF',
+                    strokeWidth: 0
+                },
+                datalessRegionColor: '#F6F6F6', ///범위 외
+                displayMode: 'regions',
+                enableRegionInteractivity: 'true',
+                resolution: 'provinces',
+                sizeAxis: {
+                    minValue: 1,
+                    maxValue: 1,
+                    minSize: 10,
+                    maxSize: 10
+                },
+                region: 'KR', //country code
+                keepAspectRatio: true,
+                width: 600,
+                height: 400,
+                tooltip: {
+                    textStyle: {
+                        color: '#0100FF'
+                    },
+                    trigger: 'focus'
+                }
+            };
+
+            var chart = new google.visualization.GeoChart(document.getElementById('visualization'));
+            google.visualization.events.addListener(chart, 'select', function() {
+                var selection = chart.getSelection();
+                if (selection.length == 1) {
+                    var selectedRow = selection[0].row;
+                    var selectedRegion = data.getValue(selectedRow, 0);
+                    if (ivalue[selectedRegion] != '') {
+                        // document.getElementsByTagName('body')[0].style.background = ivalue[selectedRegion];
+                        if (selectedRegion == 'KR-46')
+                            window.open('world_vision.html', '_self');
+                    }
+                }
+            });
+            chart.draw(data, options);
+        }
+    </script>
+</head>
+
+<body>
+    <div id='visualization'>
+    </div>
+    <iframe src="https://calendar.google.com/calendar/embed?src=wjdalsrbekt%40gmail.com&ctz=Asia%2FSeoul" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+</body>
+
+</html>

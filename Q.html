@@ -1,0 +1,123 @@
+<!--<html xmlns="http://www.w3.org/1999/xhtml" lang="kor" xml:lang="ko">-->
+<html>
+
+<head>
+    <!--<meta http-equiv="content-type" content="text/html; charset=utf-8" />-->
+    <title> fuction </title>
+    <!-- Load the AJAX API -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <!--jQuery CDN -->
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <!--Script Start -->
+    <script type="text/javascript">
+        //<![CDATA[
+        // Load the Visualization API and the corechart package.
+        // Visualization API및 corechart패키지를 로드합니다.
+        google.charts.load('current', {
+            'packages': ['corechart']
+        });
+        // Set a callback to run when the Google Visualization API is loaded
+        //Google Visualization API가 로드될 때 실행할 콜백을 설정합니다.
+        google.charts.setOnLoadCallback(drawChart);
+        //Callback that creates and populates a data table,
+        //instantiates the pie chart, passes in the data and
+        // draws it.
+        //데이터 테이블을 만들고 채우는 콜백입니다.
+        //원형 차트를 인스턴스화하고 데이터를 전달하며 그립니다.
+        function drawChart() {
+
+
+
+            //Create the data table.
+
+            //데이터 테이블 생성
+
+            var data = new google.visualization.DataTable();
+
+            data.addColumn('string', 'Topping');
+
+            data.addColumn('number', 'Slices');
+
+            data.addRows([
+
+                ['More than 50', 3],
+
+                ['10\'s', 1],
+
+                ['20\'s', 1],
+
+                ['30\'s', 1],
+
+                ['40\'s', 2]
+
+            ]);
+
+
+
+            // Set chart options
+
+            // 차트 설정 옵션
+
+            var options = {
+                'title': 'How much you donated',
+                'width': 800,
+                'height': 500
+            };
+
+
+
+            //막대차트 변경시 범례가 잘리기 때문에 가로 세로 크기를 수정한다.
+
+            //var options = {'title' : 'How much you donated', 'width' :500, 'height' : 400};
+
+
+
+
+
+            //Instantiate and draw our chart, passing in some options.
+
+            //옵션을 몇가지로 돌리면서 차트를 즉시 작성합니다.
+
+            var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+
+
+
+            //막대차트로 변경시 아래 주석을 풀면 된다.(변경된 점 PieChart -> BarChart)
+
+            //var chart1 = new google.visualization.BarChart(document.getElementById('chart_div'));
+
+
+
+
+
+            chart.draw(data, options);
+
+
+
+        }
+
+
+
+        //]]>
+    </script>
+
+</head>
+
+<body>
+
+
+
+    <!--Div that will hold the pie chart -->
+
+    <!--파이 차트를 저장할 div-->
+
+    <div id="chart_div"></div>
+
+
+
+
+
+
+</body>
+
+</html>

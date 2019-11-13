@@ -1,0 +1,339 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>후원하기</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="/images/common/miral_favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="../css/ui.common.css" />
+    <script type="text/javascript" src="../js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="../js/jquery.bxslider.js"></script>
+    <script type="text/javascript" src="../js/TweenMax.min.js"></script>
+    <script type="text/javascript" src="../js/ScrollMagic.min.js"></script>
+    <script type="text/javascript" src="../js/ui.common.js"></script>
+
+    <!-- 폼 -->
+    <script type="text/javascript" src="/js/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="/js/additional-methods.min.js"></script>
+    <script type="text/javascript" src="/js/localization/messages_ko.min.js"></script>
+    <!-- 폼 -->
+
+    <!-- Magnific Popup core CSS file -->
+    <link rel="stylesheet" href="/css/magnific-popup.css">
+    <!-- Magnific Popup core JS file -->
+    <script src="/js/jquery.magnific-popup.min.js"></script>
+
+
+
+    <script type="text/javascript" src="/js/jquery.detectmobilebrowser.js"></script>
+    <script type="text/javascript" src="/js/js.cookie.js"></script>
+
+
+
+
+    <style>
+        #img01 {
+            position: fixed;
+            left: 80%;
+            top: 15%;
+            width: 200px;
+            height: 200px;
+            background-image: url(give_love.jpg);
+            /*background-size: 50%;*/
+            background-repeat: no-repeat;
+            /*background-attachment: fixed;*/
+        }
+        
+        body {
+            font-family: 'Orbitron', sans-serif;
+        }
+        
+        hr {
+            color: #222222;
+        }
+        
+        p {
+            font-size: 16px;
+        }
+        
+        .margin {
+            margin-bottom: 45px;
+        }
+        
+        .bg-1 {
+            background-color: #FFFFFF/* white*/
+        }
+        
+        .bg-2 {
+            background-color: #474e5d;
+            /* Dark Blue */
+            color: #ffffff;
+        }
+        
+        .bg-3 {
+            background-color: #ffffff;
+            /* White */
+            color: #555555;
+        }
+        
+        .bg-4 {
+            background-color: #2f2f2f;
+            /* Black Gray */
+            color: #fff;
+        }
+        
+        h1 {
+            text-align: center;
+        }
+        
+        .y {
+            padding-top: 10px;
+            padding-bottom: 70px;
+        }
+        
+        .container-fluid {
+            padding-top: 10px;
+            padding-bottom: 40px;
+        }
+        
+        #container-fluidx {
+            padding-top: 10px;
+            padding-bottom: 70px;
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+        
+        .navbar-brand {
+            float: center;
+        }
+        
+        .container {
+            position: fixed;
+            width: 100%;
+            z-index: 2;
+            height: 75px;
+            border-style: solid;
+            border-color: #DDDDDD;
+            background-color: #FFFFFF;
+            opacity: 0.7;
+            border-width: 0px 0px 1px;
+        }
+        
+        .navbar-header {
+            padding-left: 12%;
+            padding-bottom: 12%;
+        }
+        
+        .navbar-right {
+            font-size: 18px;
+        }
+        
+        .navbar {
+            padding-top: 15px;
+            padding-bottom: 15px;
+            border: 0;
+            border-radius: 0;
+            margin-bottom: 0;
+            font-size: 12px;
+            font-weight: bold;
+            letter-spacing: 3px;
+        }
+        
+        .navbar-nav li a:hover {
+            color: #1abc9c !important;
+        }
+        
+        #myNavbar {
+            padding-top: 15px;
+        }
+        
+        #myNavbar ul {
+            padding-right: 12%;
+        }
+        
+        .hh {
+            background-color: #D5D5D5;
+        }
+        
+        #ww {
+            background-color: white;
+            border: 3px solid gray;
+            padding-top: 10px;
+        }
+        
+        .check {
+            width: 200px;
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="gray">
+        <p> </p>
+    </div>
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+                <a class="navbar-brand" href="index.html"><img src="logo.png"></a>
+            </div>
+
+        </div>
+    </nav>
+
+
+    <!-- First Container -->
+    <div class=" bg-1 " id="container-fluidx">
+        <form name="donation" action="" method="post">
+            <hr class="hr">
+            <hr/>
+            <h1>후원하기</h1>
+
+            <div id="ww">
+                <ul>
+                    <li class="check">STEP 1. 정보입력</li>
+                    <li>STEP 2. 후원금 납입방법</li>
+                    <li>STEP 3. 후원완료</li>
+                </ul>
+
+            </div>
+            <hr style="border: solid 1px #000000;">
+            <h3>정보입력</h3>
+            <table>
+                <div class="input_form">
+                    <dl>
+                        <dt>후원자 구분*</dt>
+                        <dd>
+                            <label class="form_radio"><input type="radio" name="sm_type" value="individual" checked><span>개인</span></label>
+                            <label class="form_radio"><input type="radio" name="sm_type" value="company"><span>기업</span></label>
+                            <label class="form_radio"><input type="radio" name="sm_type" value="group"><span>단체</span></label>
+                        </dd>
+                    </dl>
+                    <hr>
+                    <div class="form_area form_individual" style="display:block;">
+                        <dl>
+                            <dt>이름*<em></em></dt>
+                            <dd>
+                                <span class="form_text" style="width:400px">
+					<input title="이름" type="text"  name="sm_name" value="">
+				</span>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <hr>
+                            <dt>연락처*<em></em></dt>
+                            <dd>
+                                <div class="form_group">
+                                    <span class="form_select" style="width:120px">
+						<select name="phone1">
+							<option value="010">010</option>
+							<option value="011">011</option>
+							<option value="016">016</option>
+							<option value="017">017</option>
+							<option value="018">018</option>
+							<option value="019">019</option>
+							<option value="02">02</option>
+							<option value="051">051</option>
+							<option value="053">053</option>
+							<option value="032">032</option>
+							<option value="062">062</option>
+							<option value="042">042</option>
+							<option value="052">052</option>
+							<option value="044">044</option>
+							<option value="031">031</option>
+							<option value="033">033</option>
+							<option value="043">043</option>
+							<option value="041">041</option>
+							<option value="063">063</option>
+							<option value="061">061</option>
+							<option value="054">054</option>
+							<option value="055">055</option>
+							<option value="064">064</option>
+							<option value="070">070</option>
+						</select>
+					</span>
+                                    <span class="at">-</span>
+                                    <span class="form_text" style="width:120px;"><input type="text" name="phone2" value=""maxlength="4" onkeyup="onlyNumber(this);"></span>
+                                    <span class="at">-</span>
+                                    <span class="form_text" style="width:120px;"><input type="text" name="phone3" value="" maxlength="4" onkeyup="onlyNumber(this);"></span>
+                                    <!--a href="/popup/popup_payment.asp" onclick="popupOpen_iframe(this,520,375); return false" class="btn bg_gray" style="width:98px;"><span>회원확인</span></a-->
+
+                                    <input class="btn btn-success" type="button" onclick="alert('확인 되었습니다.');" value="실명확인" />
+                                </div>
+                            </dd>
+                        </dl>
+                        <hr>
+                        <dl>
+                            <dt>이메일*</dt>
+                            <dd>
+                                <input type='text' name="email"> @
+                                <input type='text' name="email_dns">
+                                <select name="emailaddr">
+			<option value="">직접입력</option>
+			<option value="daum.net">daum.net</option>
+			<option value="empal.com">empal.com</option>
+			<option value="gmail.com">gmail.com</option>
+			<option value="hanmail.net">hanmail.net</option>
+			<option value="msn.com">msn.com</option>
+			<option value="naver.com">naver.com</option>
+			<option value="nate.com">nate.com</option>
+		</select>
+                            </dd>
+                        </dl>
+                        <hr>
+                        <dl>
+                            <dt>주소*</dt>
+                            <dd>
+                                <input type="text" name="zip_h_1"> -
+                                <input type="text" name="zip_h_2">
+                                <input type="text" name="addr_h1"><br>
+                            </dd>
+                        </dl>
+                        <hr>
+                        <dl>
+                            <dt>메일 정보수신*</dt>
+                            <dd>
+                                <input type="radio" name="chk_mail" checked> 수신
+                                <input type="radio" name="chk_mail" value="4"> 수신거부
+                            </dd>
+                        </dl>
+                        <dl height="2" bgcolor="#FFC8C3">
+                            <dd colspan="2"></dd>
+                        </dl>
+                        <div class="text-center">
+                            <dl>
+                                <dd colspan="2" align="center">
+                                    <a class="btn btn-info" href="기부2.html" role="button">완료</a>
+                                    <input type="reset" class="btn btn-info" value="초기화">
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+            </table>
+        </form>
+        <hr style="border: solid 1px #000000;">
+        </div>
+
+        <!-- Third Container (Grid) -->
+
+
+        <!-- Footer -->
+        <footer class="container-fluid bg-4 text-center">
+            <p><br />Web-based Software Development<br /> Do ! nation </p>
+        </footer>
+
+</body>
+
+</html>
